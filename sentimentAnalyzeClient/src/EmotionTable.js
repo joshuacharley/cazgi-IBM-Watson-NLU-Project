@@ -1,5 +1,6 @@
 import React from 'react';
 import './bootstrap.min.css';
+import { func } from 'prop-types';
 
 class EmotionTable extends React.Component {
     render() {
@@ -11,6 +12,9 @@ class EmotionTable extends React.Component {
             <tbody>
             {
                 //Write code to use the .map method that you worked on in the Hands-on React lab to extract the emotions
+                this.state.sentimentOutput.map(function(emotions){
+                    return <td>{emotions}</td>
+                })
             }
             </tbody>
           </table>
